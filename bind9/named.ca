@@ -1,0 +1,7 @@
+; Corporate root servers. Created by Jaime Gomez Garcia 20191003
+.                       518400  IN      NS      a.root-servers.corp.
+.                       518400  IN      NS      b.root-servers.corp.
+
+;; ADDITIONAL SECTION:
+a.root-servers.corp.    3600000 IN      A       172.31.254.129
+b.root-servers.corp.    3600000 IN      A       172.31.254.130
