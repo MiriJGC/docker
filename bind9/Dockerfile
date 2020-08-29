@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-RUN apt-get install -y --no-install-recommends apt-utils bind9 chrony
+RUN apt-get install -y --no-install-recommends apt-utils libterm-readline-gnu-perl bind9 chrony
 
 # Enable IPv4
 #RUN sed -i 's/OPTIONS=.*/OPTIONS="-4 -u bind"/' /etc/default/bind9
