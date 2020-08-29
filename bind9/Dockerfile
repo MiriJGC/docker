@@ -17,3 +17,4 @@ COPY chrony.conf /etc/chrony/
 # Start service 
 
 CMD service bind9 start && tail -F /var/log/bind/error.log 
+CMD ["/usr/sbin/chronyd", "-d"]
