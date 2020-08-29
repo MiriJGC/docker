@@ -5,7 +5,7 @@ RUN apt-get install -y --no-install-recommends apt-utils libterm-readline-gnu-pe
 # Enable IPv4
 #RUN sed -i 's/OPTIONS=.*/OPTIONS="-4 -u bind"/' /etc/default/bind9
 
-RUN mkdir -m 777 /var/log/bind/ && touch /var/log/bind/error.log 
+RUN mkdir -m 777 /var/log/bind/ && touch /var/log/bind/error.log && echo exit 0 > /usr/sbin/policy-rc.d
 
 # Indicamos que este contenedor se comunica por el puerto 53/tcp
 EXPOSE 53/tcp 53/udp 123/tcp 123/udp
